@@ -19,3 +19,6 @@ User can set payment speed (PLN/s) and interest rate.
 By touching play button user can start payment simulation. Simulation can be stopped at any time by the user or automatically when debt is payed. Then app displays info with calculated total amount of iterest payed.
 
 App implements ContentProvider.
+
+
+##### Author: Rafał Reszczyński
