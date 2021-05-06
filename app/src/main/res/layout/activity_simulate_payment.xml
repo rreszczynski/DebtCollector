@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SimulatePaymentActivity">
+
+    <TextView
+        android:id="@+id/text_view_debtor_name_sim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/debtor_name_description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_interest_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/interest_rate_description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_interest_rate"
+        app:layout_constraintEnd_toStartOf="@+id/editText_interest_rate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editText_interest_rate" />
+
+    <EditText
+        android:id="@+id/editText_interest_rate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:inputType="number"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/text_view_percent_symbol_for_interest_rate"
+        app:layout_constraintStart_toEndOf="@+id/textView_interest_rate"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_debtor_name_sim"
+        android:importantForAutofill="no"
+        android:hint="@string/simulation_form_field_hint"/>
+
+    <TextView
+        android:id="@+id/text_view_percent_symbol_for_interest_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/interest_rate_sign"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_interest_rate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText_interest_rate"
+        app:layout_constraintTop_toTopOf="@+id/editText_interest_rate" />
+
+    <TextView
+        android:id="@+id/textView_flat_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/flat_rate_description"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_flat_rate"
+        app:layout_constraintEnd_toStartOf="@+id/editText_flat_rate"
+        app:layout_constraintStart_toStartOf="@+id/textView_interest_rate"
+        app:layout_constraintTop_toTopOf="@+id/editText_flat_rate" />
+
+    <EditText
+        android:id="@+id/editText_flat_rate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:inputType="number"
+        android:textAlignment="textEnd"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintEnd_toStartOf="@+id/text_view_currency_symbol_for_flat_rate"
+        app:layout_constraintStart_toEndOf="@+id/textView_flat_rate"
+        app:layout_constraintTop_toBottomOf="@+id/editText_interest_rate"
+        android:importantForAutofill="no"
+        android:hint="@string/simulation_form_field_hint"/>
+
+    <TextView
+        android:id="@+id/text_view_currency_symbol_for_flat_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/currency_symbol"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/editText_flat_rate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editText_flat_rate"
+        app:layout_constraintTop_toTopOf="@+id/editText_flat_rate" />
+
+    <TextView
+        android:id="@+id/text_view_debt_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/debt_to_pay_desription"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/text_view_debt_sim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_debt_sim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="72dp"
+        android:text="@string/debt_dummy_value"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton_close"
+        app:layout_constraintEnd_toStartOf="@+id/text_view_currency_symbol_for_debt_sim"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_view_currency_symbol_for_debt_sim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="@string/currency_symbol"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/text_view_debt_sim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_view_debt_sim"
+        app:layout_constraintTop_toTopOf="@+id/text_view_debt_sim" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_start_stop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_close"
+        android:contentDescription="@string/exit_button_content_description" />
+
+    <ImageButton
+        android:id="@+id/imageButton_start_stop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        app:layout_constraintBottom_toBottomOf="@+id/imageButton_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_close"
+        app:srcCompat="@drawable/ic_start"
+        android:contentDescription="@string/simulate_button_content_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

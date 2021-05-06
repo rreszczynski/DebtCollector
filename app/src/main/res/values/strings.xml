@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Dusigrosz</string>
+    <string name="add_debtor_button_content_description">Add Debtor Button</string>
+    <string name="save_button_content_description">Save Button</string>
+    <string name="exit_button_content_description">Exit Debtor Button</string>
+    <string name="share_button_content_description">Share Debtor Info Button</string>
+    <string name="simulate_button_content_description">Simulate Debt Payment Info Button</string>
+    <string name="dlug">Dług</string>
+    <string name="nazwa_osoby">Nazwa osoby</string>
+    <string name="currency_symbol">zł</string>
+    <string name="debt_dummy_value">100</string>
+    <string name="simulation_form_field_hint">wpisz wartość</string>
+    <string name="debtor_name_description">Nazwa dłużnika</string>
+    <string name="interest_rate_description">Oprocentowanie:</string>
+    <string name="interest_rate_sign">%</string>
+    <string name="flat_rate_description">Rata:</string>
+    <string name="debt_to_pay_desription">Do spłaty pozostało:</string>
+</resources>
